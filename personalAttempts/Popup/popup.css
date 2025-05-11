@@ -1,52 +1,24 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    width: 600px;
-}
-
-.container {
+    font-family: sans-serif;
+    width: 300px;
     padding: 20px;
 }
-
-h1 {
-    font-size: 18px;
-    margin-bottom: 20px;
+  
+.hidden {
+    display: none;
 }
 
-form label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
+.center {
+    text-align: center;
 }
 
-form input {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+.checkmark {
+    font-size: 48px;
+    color: #38BDF8;
 }
 
-.buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.cancel {
-    background: #f5f5f5;
-    border: 1px solid #ccc;
+button {
+    margin: 10px 5px;
     padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
 }
 
-.add {
-    background: #3b82f6;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-}

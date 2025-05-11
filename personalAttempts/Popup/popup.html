@@ -5,27 +5,29 @@
     <link rel="stylesheet" href="popup.css" />
   </head>
   <body>
-    <div class="container">
-      <h1>Add Custom Application</h1>
-      <form>
-        <label>Position Title</label>
-        <input type="text" placeholder="Entry Level Software Engineer" />
-
-        <label>Company</label>
-        <input type="text" placeholder="Google" />
-
-        <label>Location</label>
-        <input type="text" placeholder="San Francisco, CA" />
-
-        <label>Job Type</label>
-        <input type="text" placeholder="Full-Time" />
-
-        <div class="buttons">
-          <button type="button" class="cancel">Cancel</button>
-          <button type="submit" class="add">Add</button>
-        </div>
-      </form>
+    <!-- Form Section -->
+    <div id="form-section">
+        <h2>Add Custom Application</h2>
+        <form>
+        <input id="title" type="text" placeholder="Entry Level Software Engineer, Mobility" required /><br/><br/>
+        <input id="company" type="text" placeholder="Toyota Connected North America" required /><br/><br/>
+        <input id="location" type="text" placeholder="Plano, TX" required /><br/><br/>
+        <input id="jobType" type="text" placeholder="Full-Time" required /><br/><br/>
+        <button type="submit">Add</button>
+        </form>
     </div>
+
+    <!-- Confirmation Section -->
+    <div id="confirmation-section" class="hidden center">
+        <h2>Add Custom Application</h2>
+        <div class="checkmark"> Confirmed </div>
+        <h3>Saved!</h3>
+        <p>The job was successfully added to your tracker!</p>
+        <button id="close-btn">Close</button>
+        <button id="history-btn">Go to Application History</button>
+    </div>
+
+    <!-- Scripts -->
     <script src="popup.js"></script>
   </body>
 </html>

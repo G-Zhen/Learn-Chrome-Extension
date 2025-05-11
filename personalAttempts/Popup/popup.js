@@ -1,17 +1,12 @@
 document.querySelector('form').addEventListener('submit', async (e) => {
     e.preventDefault();
   
-    const position = document.querySelector('input[placeholder="Entry Level Software Engineer"]').value;
-    const company = document.querySelector('input[placeholder="Google"]').value;
-    const location = document.querySelector('input[placeholder="San Francisco, CA"]').value;
-    const jobType = document.querySelector('input[placeholder="Full-Time"]').value;
-  
     const jobData = {
-      position,
-      company,
-      location,
-      jobType,
-      createdAt: new Date().toISOString()
+        title: document.getElementById('title').value,
+        company: document.getElementById('company').value,
+        location: document.getElementById('location').value,
+        jobType: document.getElementById('jobType').value,
+        createdAt: new Date().toISOString()
     };
   
     // Store locally w/ Chrome extension local storage
@@ -19,9 +14,18 @@ document.querySelector('form').addEventListener('submit', async (e) => {
     chrome.storage.local.get({ jobEntries: [] }, (result) => {
       const updated = [...result.jobEntries, jobData];
       chrome.storage.local.set({ jobEntries: updated }, () => {
-        alert('Job entry saved locally!');
+        // Switch UI to confirmation screen
+        document.getElementById('form-section').classList.add('hidden');
+        document.getElementById('confirmation-section').classList.remove('hidden');
       });
     });
-  
-    
+});
+
+// Close and History button functionality
+document.getElementById('close-btn').addEventListener('click', () => {
+    window.close(); // closes the popup
+});
+
+document.getElementById('history-btn').addEventListener('click', () => {
+chrome.tabs.create({ url: 'https://www.google.com' }); // placeholder
 });
