@@ -1,0 +1,11 @@
+{
+    "manifest_version": 3,
+    "name": "Job Tracker Popup",
+    "version": "1.0",
+    "description": "Basic popup similar to Simplify.jobs",
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "icon.png"
+    },
+    "permissions": ["storage"]
+}
